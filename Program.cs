@@ -4,10 +4,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 builder.Services.AddControllers();
 builder.Services.AddHttpClient();
-/*
+
 var apiKey = Environment.GetEnvironmentVariable("API_KEY");
 builder.Configuration["OpenWeather:ApiKey"] = apiKey;
-*/
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy=>
